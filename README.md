@@ -1,0 +1,5 @@
+# stream-serializer
+
+## License
+
+MIT
