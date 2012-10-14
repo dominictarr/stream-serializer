@@ -1,4 +1,6 @@
 
+var EventEmitter = require('events').EventEmitter
+
 exports = module.exports = function (wrapper) {
 
   if('function' == typeof wrapper)
