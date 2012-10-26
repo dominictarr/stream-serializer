@@ -15,14 +15,15 @@ exports.json = function (stream) {
   var soFar = ''
 
   function parse (line) {
+    var js
     try {
-      var js = JSON.parse(line)
+      js = JSON.parse(line)
       //ignore lines of whitespace...
-      if(js !== undefined)
-        write.call(stream, js)
     } catch (err) { 
-      console.error('invalid JSON', data)
+      return console.error('invalid JSON', data)
     }
+    if(js !== undefined)
+      write.call(stream, js)
   }
 
   function onData (data) {
