@@ -20,7 +20,7 @@ exports.json = function (stream) {
       js = JSON.parse(line)
       //ignore lines of whitespace...
     } catch (err) { 
-      return console.error('invalid JSON', data)
+      return console.error('invalid JSON', line)
     }
     if(js !== undefined)
       write.call(stream, js)
