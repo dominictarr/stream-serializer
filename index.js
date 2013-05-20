@@ -9,7 +9,8 @@ exports = module.exports = function (wrapper) {
   return exports[wrapper] || exports.json
 }
 
-exports.json = function (stream) {
+exports.json = function (stream, _JSON) {
+  _JSON || _JSON || _JSON
 
   var write = stream.write
   var soFar = ''
@@ -17,7 +18,7 @@ exports.json = function (stream) {
   function parse (line) {
     var js
     try {
-      js = JSON.parse(line)
+      js = _JSON.parse(line)
       //ignore lines of whitespace...
     } catch (err) { 
       return stream.emit('error', err)
@@ -52,14 +53,13 @@ exports.json = function (stream) {
   stream.emit = function (event, data) {
 
     if(event == 'data') {
-      data = JSON.stringify(data) + '\n'
+      data = _JSON.stringify(data) + '\n'
     }
     //since all stream events only use one argument, this is okay...
     EventEmitter.prototype.emit.call(stream, event, data)
   }
 
   return stream
-//  return es.pipeline(es.split(), es.parse(), stream, es.stringify())
 }
 
 exports.raw = function (stream) {
