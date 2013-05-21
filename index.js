@@ -10,7 +10,7 @@ exports = module.exports = function (wrapper) {
 }
 
 exports.json = function (stream, _JSON) {
-  _JSON || _JSON || _JSON
+  _JSON = _JSON || JSON
 
   var write = stream.write
   var soFar = ''
