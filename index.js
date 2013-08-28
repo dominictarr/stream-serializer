@@ -21,6 +21,7 @@ exports.json = function (stream, _JSON) {
       js = _JSON.parse(line)
       //ignore lines of whitespace...
     } catch (err) { 
+      err.line = line
       return stream.emit('error', err)
       //return console.error('invalid JSON', line)
     }
