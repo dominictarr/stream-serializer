@@ -2,6 +2,10 @@
 
 wrap a stream of regular js objects into a stream of line seperated json.
 
+[![build status](https://secure.travis-ci.org/dominictarr/stream-serializer.png)](http://travis-ci.org/dominictarr/stream-serializer)
+
+[![testling badge](https://ci.testling.com/dominictarr/stream-serializer.png)](https://ci.testling.com/dominictarr/stream-serializer)
+
 ## example
 
 ``` js
