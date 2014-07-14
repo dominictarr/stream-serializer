@@ -17,7 +17,7 @@ json(stream) //return a stream that can be piped through a text stream.
 or
 
 ``` js
-var ss require('stream-serializer')
+var ss = require('stream-serializer')
 
 //get your user to pass in a wrapper option
 //which may be the typeof stream that is supported
