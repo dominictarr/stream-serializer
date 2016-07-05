@@ -1,6 +1,6 @@
 # stream-serializer
 
-wrap a stream of regular js objects into a stream of line seperated json.
+wrap a stream of regular js objects into a stream of line separated json.
 
 [![build status](https://secure.travis-ci.org/dominictarr/stream-serializer.png)](http://travis-ci.org/dominictarr/stream-serializer)
 
@@ -21,7 +21,7 @@ var ss = require('stream-serializer')
 
 //get your user to pass in a wrapper option
 //which may be the typeof stream that is supported
-//of a function that applys the wrapping.
+//of a function that applies the wrapping.
 
 ss(opts.wrapper)(stream) 
 
